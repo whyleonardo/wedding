@@ -58,6 +58,10 @@
     --ring: 0 0% 12.55%;
 
     --radius: 0.5rem;
+
+    --brand: #4a6741;
+    --brand-secondary: #8fa885;
+    --brand-background: #f5f2eb;
   }
 
   .dark {
@@ -170,6 +174,10 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
+  --color-brand: var(--brand);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-background: var(--brand-background);
+
   /* BORDER RADIUS */
   --border-radius-sm: var(--radius);
   --border-radius-md: calc(var(--radius) - 2px);
@@ -178,6 +186,7 @@
   /* FONT FAMILY */
   --font-family-sans: var(--font-geist-sans);
   --font-family-mono: var(--font-geist-mono);
+  --font-family-cormorant: var(--font-cormorant);
 
   /* ANIMATION */
   --animate-down: accordion-down 0.2s ease-out;
@@ -220,13 +229,12 @@
 
   ::-moz-selection {
     /* Code for Firefox */
-    color: hsl(var(--accent-foreground));
-    background: hsl(var(--accent));
+    color: var(--brand);
+    background: var(--brand-secondary);
   }
 
   ::selection {
-    color: hsl(var(--accent));
-    background: hsl(var(--accent-foreground));
-    border-radius: 1rem;
+    color: var(--brand-background);
+    background: var(--brand-secondary);
   }
 }

@@ -9,6 +9,9 @@
       "a11y": {
         "noSvgWithoutTitle": "off"
       },
+      "style": {
+        "useSelfClosingElements": "off"
+      },
       "correctness": {
         "noUnusedVariables": "error",
         "noUnusedImports": "error"

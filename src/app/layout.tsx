@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/config"
 
 import { cn } from "@/lib/utils"
 
-import { fontCalSans, fontMono, fontSans } from "@/styles/fonts"
+import { fontCormorant, fontMono, fontSans } from "@/styles/fonts"
 import "@/styles/styles.css"
 
 import { QueryProvider } from "@/providers/query-provider"
@@ -35,7 +35,14 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={cn("min-h-screen", fontSans, fontMono, fontCalSans)}>
+      <body
+        className={cn(
+          "min-h-screen",
+          fontSans,
+          fontMono,
+          fontCormorant.className
+        )}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <QueryProvider>{children}</QueryProvider>
         </ThemeProvider>
