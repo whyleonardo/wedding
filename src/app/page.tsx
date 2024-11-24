@@ -1,11 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next/types"
 
 import { links } from "@/config/links"
 
 import { cn } from "@/lib/utils"
 
 import { ExternalLink } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Laís e Leonardo | Lista de Presentes"
+}
 
 const HomePage = () => {
   return (
