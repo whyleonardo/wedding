@@ -16,7 +16,7 @@ export const links = [
   {
     name: "Casas Bahia",
     icon: Icons.casasBahia,
-    href: "https://lista.casasbahia.com.br/LAISELEONARDOLISTA",
+    href: "https://listas.casasbahia.com.br/LAISELEONARDOLISTA",
     description: "Acesse a lista de presentes da Casas Bahia"
   }
 ] as const
