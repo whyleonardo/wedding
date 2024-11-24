@@ -76,6 +76,7 @@ const HomePage = () => {
               <Link
                 key={link.href}
                 href={link.href}
+                target="_blank"
                 className="bg-opacity-50 group block rounded-xl bg-white p-4 shadow-sm backdrop-blur-sm transition-all duration-500 select-none hover:translate-y-[-2px] hover:shadow-md"
               >
                 <div className="flex items-center gap-4">
