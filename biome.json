@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": false
+  },
+  "linter": {
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error"
+      }
+    },
+    "ignore": [
+      "**/*.json",
+      "dist/**",
+      ".cache",
+      ".husky/**",
+      "public/**",
+      "*.config.*",
+      "node_modules/**",
+      "*.esm.js",
+      ".next"
+    ]
+  }
+}
