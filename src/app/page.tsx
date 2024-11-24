@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 
 import { links } from "@/config/links"
@@ -44,8 +45,16 @@ const HomePage = () => {
       {/* Main Content */}
       <div className="relative container mx-auto max-w-2xl px-4 py-16">
         <header className="mb-12 text-center">
+          <Image
+            src="/photo.jpg"
+            width={250}
+            height={250}
+            alt="Foto"
+            className="mx-auto mb-4 size-36 rounded-full object-cover"
+          />
+
           <h1 className="text-brand mb-2 text-4xl md:text-5xl">
-            Nossa Lista de Presentes
+            Lista de Presentes
           </h1>
           <p className="text-brand-secondary text-xl font-normal">
             Obrigado por pensar em nós.
@@ -62,10 +71,10 @@ const HomePage = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="bg-opacity-50 group block rounded-xl bg-white p-4 shadow-sm backdrop-blur-sm transition-all select-none hover:translate-y-[-2px] hover:shadow-md"
+                className="bg-opacity-50 group block rounded-xl bg-white p-4 shadow-sm backdrop-blur-sm transition-all duration-500 select-none hover:translate-y-[-2px] hover:shadow-md"
               >
                 <div className="flex items-center gap-4">
-                  <div className="bg-opacity-10 bg-brand flex size-14 items-center justify-center rounded-full p-1.5">
+                  <div className="bg-opacity-10 bg-brand flex size-12 items-center justify-center rounded-full p-1.5">
                     <Icon
                       className={cn(
                         "size-full fill-white",
