@@ -117,7 +117,7 @@ const HomePage = () => {
             </div>
 
             <div className="flex-1">
-              <h2 className="text-brand text-xl font-medium md:text-2xl">
+              <h2 className="text-brand text-2xl font-medium md:text-2xl">
                 Confirme aqui
               </h2>
             </div>
