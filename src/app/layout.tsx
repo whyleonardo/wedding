@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import type { ReactNode } from "react"
 
+import { MicrosoftClarity } from "@/components/microsoft-clarity"
 import { ScreenSizeIndicator } from "@/components/screen-size-indicator"
 
 import { siteConfig } from "@/config/config"
@@ -50,6 +51,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
             {children}
 
             <Analytics />
+            <MicrosoftClarity />
           </QueryProvider>
         </ThemeProvider>
         <ScreenSizeIndicator />
