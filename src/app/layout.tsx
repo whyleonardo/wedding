@@ -13,6 +13,8 @@ import "@/styles/styles.css"
 import { QueryProvider } from "@/providers/query-provider"
 import { ThemeProvider } from "@/providers/theme-provider"
 
+import { Analytics } from "@vercel/analytics/react"
+
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
@@ -44,7 +46,11 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <QueryProvider>{children}</QueryProvider>
+          <QueryProvider>
+            {children}
+
+            <Analytics />
+          </QueryProvider>
         </ThemeProvider>
         <ScreenSizeIndicator />
       </body>
