@@ -16,6 +16,8 @@ import { ThemeProvider } from "@/providers/theme-provider"
 
 import { Analytics } from "@vercel/analytics/react"
 
+import { Toaster } from "sonner"
+
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
@@ -49,7 +51,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <QueryProvider>
             {children}
-
+            <Toaster richColors />
             <Analytics />
             <MicrosoftClarity />
           </QueryProvider>

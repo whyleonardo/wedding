@@ -2,11 +2,15 @@ import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next/types"
 
+import { CopyPixCodeButton } from "@/components/copy-pix-code-button"
+
+import { siteConfig } from "@/config/config"
 import { links } from "@/config/links"
 
 import { cn } from "@/lib/utils"
 
 import { CalendarCheckIcon, ExternalLink } from "lucide-react"
+import { QRCodeSVG } from "qrcode.react"
 
 export const metadata: Metadata = {
   title: "Laís e Leonardo | Lista de Presentes"
@@ -48,7 +52,7 @@ const HomePage = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative container mx-auto max-w-2xl px-4 py-16">
+      <div className="relative container mx-auto max-w-2xl space-y-8 px-4 pt-16 pb-8">
         <header className="text-center">
           <Image
             src="/photo.webp"
@@ -61,13 +65,12 @@ const HomePage = () => {
           <h1 className="text-brand text-4xl md:text-5xl">
             Lista de Presentes
           </h1>
-          <p className="text-brand-secondary mt-2 text-xl font-normal">
+          <p className="text-brand-secondary text-xl font-normal">
             Agradecemos a sua contribuição ♥
           </p>
         </header>
-        <div className="my-6 space-y-4">
-          {/* Amazon Wishlist */}
 
+        <div className="mb-8 space-y-4">
           {links.map((link) => {
             const Icon = link.icon
 
@@ -80,11 +83,7 @@ const HomePage = () => {
               >
                 <div className="flex items-center gap-4">
                   <div className="bg-opacity-10 bg-brand flex size-12 items-center justify-center rounded-full p-1.5">
-                    <Icon
-                      className={cn(
-                        "size-full fill-white"
-                      )}
-                    />
+                    <Icon className={cn("size-full fill-white")} />
                   </div>
                   <div className="flex-1">
                     <h2 className="text-brand text-2xl font-medium">
@@ -99,9 +98,23 @@ const HomePage = () => {
               </Link>
             )
           })}
+
+          <p className="text-brand-secondary text-center text-xl font-normal">
+            Ou nos ajude com qualquer quantia
+          </p>
+
+          <section className="my-4 space-y-4">
+            <div className="flex flex-col items-center gap-4">
+              <div className="rounded-lg bg-white p-2">
+                <QRCodeSVG value={siteConfig.pixCode} size={225} level="M" />
+              </div>
+
+              <CopyPixCodeButton />
+            </div>
+          </section>
         </div>
 
-        <p className="text-brand-secondary mt-2 text-center text-xl font-normal">
+        <p className="text-brand text-center text-2xl font-medium">
           Ainda não confirmou sua presença?
         </p>
 
