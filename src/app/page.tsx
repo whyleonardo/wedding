@@ -82,8 +82,7 @@ const HomePage = () => {
                   <div className="bg-opacity-10 bg-brand flex size-12 items-center justify-center rounded-full p-1.5">
                     <Icon
                       className={cn(
-                        "size-full fill-white",
-                        link.name === "Amazon" && "size-8"
+                        "size-full fill-white"
                       )}
                     />
                   </div>
