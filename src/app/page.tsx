@@ -51,7 +51,7 @@ const HomePage = () => {
       <div className="relative container mx-auto max-w-2xl px-4 py-16">
         <header className="text-center">
           <Image
-            src="/photo.jpg"
+            src="/photo.webp"
             width={250}
             height={250}
             alt="Foto"
